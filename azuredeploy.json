@@ -7,14 +7,14 @@
             "metadata": {
                 "description": "Name for the container group"
             },
-            "defaultValue": "sjkprequestbin4"
+            "defaultValue": "requestb"
         },
         "name2": {
             "type": "string",
             "metadata": {
                 "description": "Name for the container group"
             },
-            "defaultValue": "sjkpredis"
+            "defaultValue": "requestbredis"
         },
         "environment": {
             "type": "string",
@@ -54,7 +54,7 @@
             },
             "defaultValue": "redis"
         },
-        
+
 
         "cpuCores": {
             "type": "string",
@@ -145,7 +145,7 @@
               "[resourceId('Microsoft.Web/serverfarms', variables('dynamicAppServicePlanName'))]",
               "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
             ],
-            "resources": [        
+            "resources": [
               {
                 "apiVersion": "2016-03-01",
                 "name": "appsettings",
@@ -173,7 +173,7 @@
                     "branch": "[parameters('branch')]",
                     "IsManualIntegration": true
                 }
-                }     
+                }
             ]
           },
         {
@@ -208,7 +208,7 @@
                                 },
                                 {
                                     "name": "REDIS_URL",
-                                    "value": "[concat('redis://127.0.0.1:6379/0')]"                                   
+                                    "value": "[concat('redis://127.0.0.1:6379/0')]"
                                 }
                             ],
                             "resources": {
@@ -226,7 +226,7 @@
                             "ports": [
                                 {
                                     "port": "6379"
-                                }                               
+                                }
                             ],
                             "environmentVariables": [
                                 {
